@@ -1,0 +1,30 @@
+.wrapper {
+  width: 450px;
+  height: 250px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(12, 12, 49);
+  margin-left: 48px;
+  margin-top: 48px;
+}
+
+.wrapper p {
+  font-size: 24px;
+  color: #fff;
+}
+.wrapper span {
+  color: #fff;
+}
+
+.container :global .ant-switch {
+  width: 50px !important;
+  height: 22px !important;
+  margin-bottom: 56px;
+}
+
+// .container :global .ant-switch-inner {
+//   background-color: red;
+// }
