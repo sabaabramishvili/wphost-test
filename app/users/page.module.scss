@@ -1,0 +1,42 @@
+.wrapper {
+  width: 750px;
+  height: 250px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px;
+  background-color: rgb(48, 48, 77);
+  margin-left: 48px;
+  margin-top: 48px;
+}
+
+.labelWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.labelWrapper label {
+  color: #fff;
+  padding-top: 12px;
+  font-size: 24px;
+}
+
+.mainWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 48px;
+}
+
+.Button {
+  background-color: #853308;
+  border: none;
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  align-self: flex-end;
+}

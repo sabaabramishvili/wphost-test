@@ -42,7 +42,7 @@ const NavigationBar = () => {
           <Image src={'/plugin.png'} alt="dashboard" width={24} height={24} />
           <span>Plugins</span>
         </Link>
-        <Link className={styles.contanerNav} href={'#'}>
+        <Link className={styles.contanerNav} href={'/users'}>
           <Image src={'/user.png'} alt="dashboard" width={24} height={24} />
           <span>Users</span>
         </Link>
@@ -50,7 +50,7 @@ const NavigationBar = () => {
           <Image src={'/tool.jpg'} alt="dashboard" width={24} height={24} />
           <span>Tools</span>
         </Link>
-        <Link className={styles.contanerNav} href={'#'}>
+        <Link className={styles.contanerNav} href={'/settings'}>
           <Image src={'/settings.png'} alt="dashboard" width={24} height={24} />
           <span>Settings</span>
         </Link>
