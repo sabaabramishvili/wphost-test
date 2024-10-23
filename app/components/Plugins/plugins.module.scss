@@ -1,27 +1,90 @@
 .mainContainer {
-    width: 100%;
-    height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-direction: column;
-}
-
-.containerWrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-}
-
-.button {
-    width: 80px;
-    height: 20px;
-}
-
-.select {
-    width: 250px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+    color: #f0f4f8; 
+    margin: 0 auto;
+    border-radius: 12px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
 .wrapper {
+    width: 48%;
+    margin-bottom: 20px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.containerWrapper {
+    background-color: #1b1b5e;
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); 
+    margin-bottom: 30px;
+}
+
+.h1 {
+    color: #f0f4f8;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #0d0d40; /* Matches dark theme */
+    border: 1px solid #333366;
+    border-radius: 6px;
+    transition: border-color 0.2s, background-color 0.2s;
+
+    &:hover, &:focus {
+        border-color: #1a53ff;
+        background-color: #151551;
+        outline: none;
+    }
+}
+
+.button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #667;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+
+    &:hover {
+        background-color: #3366ff; /* Lighter hover effect */
+    }
+
+    &:active {
+        background-color: #0033cc;
+    }
+
+    &:disabled {
+        background-color: #4d4d80;
+        cursor: not-allowed;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .mainContainer {
+        flex-direction: column;
+    }
 }

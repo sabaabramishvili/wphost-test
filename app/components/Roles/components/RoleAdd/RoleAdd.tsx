@@ -31,18 +31,20 @@ const RoleAdd = () => {
       <h1>RoleAdd</h1>
 
       <input
+        className={styles.inputRole}
         type="text"
         value={user}
         onChange={inputChange}
         placeholder="Enter role for user"
       />
       <input
+        className={styles.inputUser}
         type="text"
         value={displayName}
         onChange={displayChange}
         placeholder="Enter displayname for user"
       />
-      <input type="submit" onClick={onClick} value="Submit" />
+      <input className={styles.button} type="submit" onClick={onClick} value="Submit" />
     </div>
   );
 };

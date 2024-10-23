@@ -1,7 +1,8 @@
 'use client';
+
+import styles from "./plugins.module.scss";
 import { ChangeEvent, useState } from "react";
 import axios from "axios";
-import styles from "./plugins.module.scss";
 
 interface Data {
     title: string;
@@ -98,8 +99,8 @@ const Plugins = () => {
                 </div>
 
                 <div>
-                    <h1>Plugin Delete</h1>
                     <div className={styles.containerWrapper}>
+                        <h1>Plugin Delete</h1>
                         <select className={styles.select} onChange={(e: ChangeEvent<HTMLSelectElement>) => setForDeleteData(e.target.value)}>
                             <option value="">....</option>
                             {pluginArray.map(plugin => (
@@ -130,16 +131,16 @@ const Plugins = () => {
                     </button>
                 </div>
                 <div>
-                    <h1>Deactivate plugin</h1>
-                    <select className={styles.select} onChange={(e: ChangeEvent<HTMLSelectElement>) => setDeactivateData(e.target.value)}>
-                        <option value="">....</option>
-                        {pluginArray.map(plugin => (
-                            <option key={plugin.value} value={plugin.value}>
-                                {plugin.title}
-                            </option>
-                        ))}
-                    </select>
-                    <div>
+                    <div className={styles.containerWrapper} >
+                        <h1>Deactivate plugin</h1>
+                        <select className={styles.select} onChange={(e: ChangeEvent<HTMLSelectElement>) => setDeactivateData(e.target.value)}>
+                            <option value="">....</option>
+                            {pluginArray.map(plugin => (
+                                <option key={plugin.value} value={plugin.value}>
+                                    {plugin.title}
+                                </option>
+                            ))}
+                        </select>
                         <button className={styles.button} onClick={handleDeactivatePlugin}>
                             Submit
                         </button>
