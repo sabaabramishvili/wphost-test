@@ -1,0 +1,91 @@
+.wrapper {
+  width: 750px;
+  height: 300px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  padding: 24px;
+  background-color: rgb(48, 48, 77);
+  margin-left: 48px;
+  margin-top: 48px;
+}
+
+.container p {
+  font-size: 24px;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 12px;
+}
+
+.container button {
+  background-color: rgb(1, 150, 1);
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.container button:hover {
+  background-color: rgb(30, 228, 30);
+}
+
+.container input {
+  width: 200px;
+  height: 30px;
+  border-radius: 4px;
+}
+
+.wrapperContainer p {
+  font-size: 24px;
+  color: #fff;
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 12px;
+}
+
+.inputWrapper input {
+  width: 200px;
+  height: 30px;
+  border-radius: 4px;
+  padding-left: 8px;
+}
+
+.inputContainer {
+  display: flex;
+  gap: 12px;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.button {
+  background-color: rgb(1, 150, 1);
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+.button:hover {
+  background-color: rgb(30, 228, 30);
+}
+
+.wrapperContainer span {
+  color: red;
+}

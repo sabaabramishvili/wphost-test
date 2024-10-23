@@ -4,6 +4,9 @@ import { useEffect, useState } from 'react';
 import styles from './page.module.scss';
 import axios from 'axios';
 import Image from 'next/image';
+import Roles from '../components/Roles/Roles';
+import UsersTable from '../components/UsersTable/UsersTable';
+import UserGenerate from '../components/UserGenerate/UserGenerate';
 
 interface RolesPropsInterface {
   role: string;
@@ -178,54 +181,63 @@ const Users = () => {
   };
 
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.mainWrapper}>
-        <div className={styles.labelWrapper}>
-          <label htmlFor="select1">Select Role</label>
-          <select
-            id="select1"
-            defaultValue="Choose a role"
-            onChange={handleRoleChange}
-          >
-            <option value="" disabled>
-              Choose a role
-            </option>
-            {roles.map((item, index) => (
-              <option value={item.role} key={index}>
-                {item.role}
-              </option>
-            ))}
-          </select>
+    <div className={styles.mainWrapperContainer}>
+      <div className={styles.mainContainer}>
+        <div>
+          <div className={styles.wrapper}>
+            <div className={styles.mainWrapper}>
+              <div className={styles.labelWrapper}>
+                <label htmlFor="select1">Select Role</label>
+                <select
+                  id="select1"
+                  defaultValue="Choose a role"
+                  onChange={handleRoleChange}
+                >
+                  <option value="" disabled>
+                    Choose a role
+                  </option>
+                  {roles.map((item, index) => (
+                    <option value={item.role} key={index}>
+                      {item.role}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div className={styles.labelWrapper}>
+                <label htmlFor="select2">{"Role's Capabilities"}</label>
+                <select id="select2" onChange={handleDeleteCapabilityChange}>
+                  {roleCapabilities.map((item, index) => (
+                    <option value={item.name} key={index}>
+                      {item.name}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div className={styles.labelWrapper}>
+                <label htmlFor="capabilities">All Capabilities</label>
+                <select id="capabilities" onChange={handleCapabilityChange}>
+                  {filteredCapabilities.map((item, index) => (
+                    <option key={index} value={item}>
+                      {item}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+            <div className={styles.adjustButtons}>
+              <div className={styles.trashIconWrapper} onClick={onHandleDelete}>
+                <Image src="/trash.svg" alt="trash" width={20} height={20} />
+              </div>
+              <button className={styles.Button} onClick={onHandleSubmit}>
+                Add Capabilities
+              </button>
+            </div>
+          </div>
+          <UserGenerate />
         </div>
-        <div className={styles.labelWrapper}>
-          <label htmlFor="select2">{"Role's Capabilities"}</label>
-          <select id="select2" onChange={handleDeleteCapabilityChange}>
-            {roleCapabilities.map((item, index) => (
-              <option value={item.name} key={index}>
-                {item.name}
-              </option>
-            ))}
-          </select>
-        </div>
-        <div className={styles.labelWrapper}>
-          <label htmlFor="capabilities">All Capabilities</label>
-          <select id="capabilities" onChange={handleCapabilityChange}>
-            {filteredCapabilities.map((item, index) => (
-              <option key={index} value={item}>
-                {item}
-              </option>
-            ))}
-          </select>
-        </div>
+        <Roles />
       </div>
-      <div className={styles.adjustButtons}>
-        <div className={styles.trashIconWrapper} onClick={onHandleDelete}>
-          <Image src="/trash.svg" alt="trash" width={20} height={20} />
-        </div>
-        <button className={styles.Button} onClick={onHandleSubmit}>
-          Add Capabilities
-        </button>
-      </div>
+      <UsersTable />
     </div>
   );
 };

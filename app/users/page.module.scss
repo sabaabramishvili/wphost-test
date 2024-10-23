@@ -66,3 +66,14 @@
   justify-content: end;
   gap: 12px;
 }
+
+.mainContainer {
+  display: flex;
+  gap: 24px;
+}
+
+.mainWrapperContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}

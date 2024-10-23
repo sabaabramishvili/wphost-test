@@ -1,14 +1,9 @@
-
-import Plugins from "../components/Plugins/Plugins";
-
-
+import Plugins from '../components/Plugins/Plugins';
 
 export default function Plugin() {
-
-    return (
-        <>
-            <Plugins />
-        </>
-    )
-
+  return (
+    <>
+      <Plugins />
+    </>
+  );
 }

@@ -1,33 +1,33 @@
 .container {
-    background-color: rgb(12, 12, 49);
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-    max-width: 400px;
-    color: #f0f4f8;
-    text-align: center;
-    width: 340px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    
+  background-color: rgb(12, 12, 49);
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  max-width: 400px;
+  color: #f0f4f8;
+  text-align: center;
+  width: 340px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
 }
 
 .h1 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    color: #f0f4f8;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #f0f4f8;
 }
 
 .select {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    font-size: 1rem;
-    color: #fff;
-    background-color: #1b1b5e;
-    border: 1px solid #333366;
-    transition: border-color 0.2s;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #1b1b5e;
+  border: 1px solid #333366;
+  transition: border-color 0.2s;
 
-    &:focus {
-        border-color: #1a53ff;
-        outline: none;
-    }
+  &:focus {
+    border-color: #1a53ff;
+    outline: none;
+  }
 }
