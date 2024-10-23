@@ -1,9 +1,12 @@
 .wrapper {
-  height: 100vh;
+  padding: 15px 5px;
+  border-radius: 2px; 
+  height: fit-content;
   background-color: rgb(12, 12, 49);
   width: 180px;
   position: relative;
   left: 0;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
 .contanerNav {
@@ -32,4 +35,37 @@
 .logoWrapper {
   padding-top: 12px;
   cursor: pointer;
+}
+
+.dropDownWrapper {
+  position: relative;
+}
+
+.wrapperLists {
+  position: absolute;
+  height: fit-content;
+  background-color: rgb(12, 12, 49);
+  width: 200px;
+  padding: 15px 25px 15px 25px;
+  display: flex;
+  gap: 10px;
+  border-radius: 4px;
+}
+
+.listStyle {
+  color: grey;
+  cursor: pointer;
+  list-style: none;
+}
+
+.listStyle:hover {
+  color: white;
+}
+
+.styles.toolsIconWrapper {
+  display: flex;
+}
+
+.LinksTag {
+  text-decoration: none;
 }
