@@ -27,7 +27,7 @@ const NavigationBar = () => {
           <span>Media</span>
         </Link>
         <Link className={styles.contanerNav} href={'#'}>
-          <Image src={'/page.webp'} alt="dashboard" width={24} height={24} />
+          <Image src={'/furceli.png'} alt="dashboard" width={24} height={20} />
           <span>Pages</span>
         </Link>
         <Link className={styles.contanerNav} href={'#'}>
@@ -39,7 +39,7 @@ const NavigationBar = () => {
           <span>Apparance</span>
         </Link>
         <Link className={styles.contanerNav} href={'#'}>
-          <Image src={'/plugin.png'} alt="dashboard" width={24} height={24} />
+          <Image src={'/download.png'} alt="dashboard" width={24} height={24} />
           <span>Plugins</span>
         </Link>
         <Link className={styles.contanerNav} href={'/users'}>
@@ -47,7 +47,7 @@ const NavigationBar = () => {
           <span>Users</span>
         </Link>
         <Link className={styles.contanerNav} href={'#'}>
-          <Image src={'/tool.jpg'} alt="dashboard" width={24} height={24} />
+          <Image src={'/kluchv2.png'} alt="dashboard" width={24} height={24} />
           <span>Tools</span>
         </Link>
         <Link className={styles.contanerNav} href={'/settings'}>
@@ -55,7 +55,7 @@ const NavigationBar = () => {
           <span>Settings</span>
         </Link>
         <Link className={styles.contanerNav} href={'#'}>
-          <Image src={'/language.png'} alt="dashboard" width={24} height={24} />
+          <Image src={'/globusv3.png'} alt="dashboard" width={24} height={24} />
           <span>Languages</span>
         </Link>
       </div>

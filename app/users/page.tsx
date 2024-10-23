@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import styles from './page.module.scss';
 import axios from 'axios';
+import Image from 'next/image';
 
 interface RolesPropsInterface {
   role: string;
@@ -83,6 +84,8 @@ const Users = () => {
   >([]);
   const [selectedRole, setSelectedRole] = useState<string>('');
   const [selectedCapability, setSelectedCapability] = useState<string>('');
+  const [selectedDeleteCapability, setSelectedDeleteCapability] =
+    useState<string>('');
 
   useEffect(() => {
     const fetchRoles = async () => {
@@ -91,8 +94,8 @@ const Users = () => {
           'http://10.10.51.116:3001/wp-cli/roles'
         );
         setRoles(response.data);
-      } catch (error) {
-        console.error('Error fetching roles:', error);
+      } catch {
+        alert('Could not get roles');
       }
     };
     fetchRoles();
@@ -109,8 +112,8 @@ const Users = () => {
             }
           );
           setRoleCapabilities(response.data);
-        } catch (error) {
-          console.error('Error fetching role capabilities:', error);
+        } catch {
+          alert('Could not fetch role capabilities');
         }
       };
       fetchRoleCapabilities();
@@ -128,6 +131,12 @@ const Users = () => {
     setSelectedCapability(event.target.value);
   };
 
+  const handleDeleteCapabilityChange = (
+    event: React.ChangeEvent<HTMLSelectElement>
+  ) => {
+    setSelectedDeleteCapability(event.target.value);
+  };
+
   const selectedRoleCapabilityNames = roleCapabilities.map((item) => item.name);
   const filteredCapabilities = capabilities.filter(
     (capability) => !selectedRoleCapabilityNames.includes(capability)
@@ -140,11 +149,30 @@ const Users = () => {
           role: selectedRole,
           capability: selectedCapability,
         });
-
         setRoleCapabilities((prev) => [...prev, { name: selectedCapability }]);
         setSelectedCapability('');
-      } catch (error) {
-        console.error('Error adding capability:', error);
+      } catch {
+        alert('Could not add capability');
+      }
+    }
+  };
+
+  const onHandleDelete = async () => {
+    if (selectedDeleteCapability) {
+      try {
+        await axios.post('http://10.10.51.116:3001/wp-cli/cap/delete', {
+          roleName: selectedRole,
+          cap: selectedDeleteCapability,
+        });
+        console.log('deleted ', selectedDeleteCapability);
+
+        setRoleCapabilities((prev) =>
+          prev.filter((cap) => cap.name !== selectedDeleteCapability)
+        );
+
+        setSelectedDeleteCapability('');
+      } catch {
+        alert('Could not delete capability');
       }
     }
   };
@@ -171,7 +199,7 @@ const Users = () => {
         </div>
         <div className={styles.labelWrapper}>
           <label htmlFor="select2">{"Role's Capabilities"}</label>
-          <select id="select2">
+          <select id="select2" onChange={handleDeleteCapabilityChange}>
             {roleCapabilities.map((item, index) => (
               <option value={item.name} key={index}>
                 {item.name}
@@ -180,7 +208,7 @@ const Users = () => {
           </select>
         </div>
         <div className={styles.labelWrapper}>
-          <label htmlFor="capabilities">Capabilities</label>
+          <label htmlFor="capabilities">All Capabilities</label>
           <select id="capabilities" onChange={handleCapabilityChange}>
             {filteredCapabilities.map((item, index) => (
               <option key={index} value={item}>
@@ -190,9 +218,14 @@ const Users = () => {
           </select>
         </div>
       </div>
-      <button className={styles.Button} onClick={onHandleSubmit}>
-        Add Capabilities
-      </button>
+      <div className={styles.adjustButtons}>
+        <div className={styles.trashIconWrapper} onClick={onHandleDelete}>
+          <Image src="/trash.svg" alt="trash" width={20} height={20} />
+        </div>
+        <button className={styles.Button} onClick={onHandleSubmit}>
+          Add Capabilities
+        </button>
+      </div>
     </div>
   );
 };
