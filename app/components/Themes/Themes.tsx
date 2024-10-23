@@ -1,7 +1,7 @@
-'use client';
-
+"use client";
 import { useState } from 'react';
 import axios from 'axios';
+import styles from './Themes.module.scss';
 
 const Themes = () => {
   const [selectedTheme, setSelectedTheme] = useState('adonay');
@@ -39,27 +39,23 @@ const Themes = () => {
   };
 
   return (
-    <div>
-      <h1>Select to add Theme</h1>
-      <select value={selectedTheme} onChange={onHandleChange}>
+    <div className={styles.container}>
+      <h1 className={styles.caption}>Select to add Theme</h1>
+      <select value={selectedTheme} onChange={onHandleChange} className={styles.select}>
         <option value="impressionist">impressionist</option>
         <option value="adonay">adonay</option>
         <option value="colorloops">colorloops</option>
       </select>
-      <button onClick={onSubmit}>Submit</button>
-      <br />
-      <br />
-      <hr />
-      <br />
-      <div>
-        <h1>Select to delete Theme</h1>
-        <select onChange={onHandleDelete} value={deletedTheme}>
+      <button onClick={onSubmit} className={styles.button}>Submit</button>
+      
+      <div className={styles.section}> 
+        <h1 className={styles.caption}>Select to delete Theme</h1>
+        <select onChange={onHandleDelete} value={deletedTheme} className={styles.select}>
           <option value="impressionist">impressionist</option>
           <option value="adonay">adonay</option>
           <option value="colorloops">colorloops</option>
         </select>
-        <p>Theme activation</p>
-        <button onClick={onDelete}>Delete</button>
+        <button onClick={onDelete} className={styles.button}>Delete</button>
       </div>
     </div>
   );
