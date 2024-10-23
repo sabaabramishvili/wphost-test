@@ -24,14 +24,15 @@ const RoleDelete = () => {
 
   return (
     <div className={styles.container}>
-        <h1>RoleDelete</h1>
+        <h1 className={styles.captions} >RoleDelete</h1>
       <input
+        className={styles.input}
         type="text"
         value={user}
         onChange={inputChange}
         placeholder="Enter role for user"
       />
-      <input type="submit" onClick={onClick} value="Submit" />
+      <input className={styles.button} type="submit" onClick={onClick} value="Submit" />
     </div>
   );
 };

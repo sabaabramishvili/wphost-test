@@ -1,6 +1,98 @@
 .container {
+    background-color: rgb(12, 12, 49);
+    /* Matching dark background */
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    max-width: 400px;
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    width: 300px;
+    color: #f0f4f8;
+    text-align: center;
+    width: 340px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    align-items: center;
+    border-bottom: 1px solid grey;
+}
+
+.h1 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #f0f4f8;
+}
+
+.button {
+    width: 150px;
+    height: 30px;
+    border: 0px;
+    border-radius: 5px;
+    color: white;
+    background-color: grey;
+    cursor: pointer;
+}
+
+.button:active {
+    background-color: white;
+    color: black;
+}
+
+.inputUser {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #1b1b5e;
+    border: 1px solid #333366;
+    border-radius: 6px;
+    transition: border-color 0.2s;
+}
+
+.inputRole {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #1b1b5e;
+    border: 1px solid #333366;
+    border-radius: 6px;
+    transition: border-color 0.2s;
+}
+
+.inputField {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #1b1b5e;
+    border: 1px solid #333366;
+    border-radius: 6px;
+    transition: border-color 0.2s;
+
+    &:focus {
+        border-color: #1a53ff;
+        outline: none;
+    }
+}
+
+.submitButton {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #1a53ff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+        background-color: #3366ff;
+    }
+
+    &:active {
+        background-color: #0033cc;
+    }
 }

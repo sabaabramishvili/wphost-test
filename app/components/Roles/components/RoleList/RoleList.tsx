@@ -20,7 +20,7 @@ const RoleList = () => {
   return (
     <div className={styles.container}>
         <h1>Role List</h1>
-      <select value={selectedRole} onChange={onRoleChange}>
+      <select className={styles.select} value={selectedRole} onChange={onRoleChange}>
         <option value="">Select a role</option>
         {list.map((role: any) => (
           <option key={role.name} value={role.name}>

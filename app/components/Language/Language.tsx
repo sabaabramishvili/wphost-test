@@ -98,47 +98,53 @@ const Language = () => {
     <div className={styles.mainContainer}>
       <div className={styles.container}>
         <h1>All Languages</h1>
-        <select value={installLanguage} onChange={onInstallChange}>
-          <option value="">Select a language</option>
-          {languages.map((language: any) => (
-            <option key={language.language} value={language.language}>
-              {language.english_name}
-            </option>
-          ))}
-        </select>
-        <button onClick={onInstall}>Install Language</button>
+        <div className={styles.wrapper} >
+          <select className={styles.select} value={installLanguage} onChange={onInstallChange}>
+            <option value="">Select a language</option>
+            {languages.map((language: any) => (
+              <option key={language.language} value={language.language}>
+                {language.english_name}
+              </option>
+            ))}
+          </select>
+          <button className={styles.button} onClick={onInstall}>Install Language</button>
+        </div>
       </div>
 
       <div className={styles.container}>
         <h1>Installed Languages</h1>
-        <select value={selectedOption} onChange={onChange}>
-          <option value="">Select a language</option>
-          {installed.map((lang: any) => (
-            <option key={lang.language} value={lang.language}>
-              {lang.english_name}
-            </option>
-          ))}
-        </select>
-        <button onClick={onClick}>Switch Language</button>
+        <div className={styles.wrapper} >
+          <select className={styles.select} value={selectedOption} onChange={onChange}>
+            <option value="">Select a language</option>
+            {installed.map((lang: any) => (
+              <option key={lang.language} value={lang.language}>
+                {lang.english_name}
+              </option>
+            ))}
+          </select>
+          <button className={styles.button} onClick={onClick}>Switch Language</button>
+        </div>
       </div>
 
       <div className={styles.container}>
         <h1>Installed Languages to Delete</h1>
-        <select value={deleteChange} onChange={onDeleteChange}>
-          <option value="">Select a language</option>
-          {installed.map((lang: any) => (
-            <option
-              key={lang.language}
-              value={lang.language}
-              disabled={lang.status === "active"}
-            >
-              {lang.english_name}
-            </option>
-          ))}
-        </select>
-        <button onClick={onDelete} disabled={deleteChange === ""}>
-          Delete Language
-        </button>
+        <div className={styles.wrapper} >
+          <select className={styles.select} value={deleteChange} onChange={onDeleteChange}>
+            <option value="">Select a language</option>
+            {installed.map((lang: any) => (
+              <option
+                key={lang.language}
+                value={lang.language}
+                disabled={lang.status === "active"}
+              >
+                {lang.english_name}
+              </option>
+            ))}
+          </select>
+          <button className={styles.button} onClick={onDelete} disabled={deleteChange === ""}>
+            Delete Language
+          </button>
+        </div>
       </div>
     </div>
   );
