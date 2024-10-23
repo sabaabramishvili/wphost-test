@@ -1,12 +1,11 @@
-'use client'
+'use client';
 import Image from 'next/image';
 import styles from './NavigationBar.module.scss';
 import Link from 'next/link';
-import { act, useState } from 'react';
+import { useState } from 'react';
 
 const NavigationBar = () => {
-
-  const [active, setActive] = useState<Boolean>(false);
+  const [active, setActive] = useState<boolean>(false);
 
   return (
     <div className={styles.wrapper}>
@@ -51,19 +50,31 @@ const NavigationBar = () => {
           <Image src={'/user.png'} alt="dashboard" width={24} height={24} />
           <span>Users</span>
         </Link>
-        <div className={styles.toolsIconWrapper} onMouseLeave={() => setActive(false)}>
-          <Link className={styles.contanerNav} href={'/tools'} onMouseOver={() => setActive(true)}>
-            <Image src={'/kluchv2.png'} alt="dashboard" width={24} height={24} />
+        <div
+          className={styles.toolsIconWrapper}
+          onMouseLeave={() => setActive(false)}
+        >
+          <Link
+            className={styles.contanerNav}
+            href={'/tools'}
+            onMouseOver={() => setActive(true)}
+          >
+            <Image
+              src={'/kluchv2.png'}
+              alt="dashboard"
+              width={24}
+              height={24}
+            />
             <span>Tools</span>
           </Link>
           <div className={styles.dropDownWrapper}>
             {active && (
               <div className={styles.wrapperLists}>
                 <ul>
-                  <Link className={styles.LinksTag} href={"#"} >
+                  <Link className={styles.LinksTag} href={'#'}>
                     <li className={styles.listStyle}>Import</li>
                   </Link>
-                  <Link className={styles.LinksTag} href={"/export"}>
+                  <Link className={styles.LinksTag} href={'/export'}>
                     <li className={styles.listStyle}>Export</li>
                   </Link>
                 </ul>
