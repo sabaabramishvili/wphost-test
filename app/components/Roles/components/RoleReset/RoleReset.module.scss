@@ -1,14 +1,13 @@
 .container {
-    background-color: rgb(12, 12, 49); /* Matching dark background */
+    background-color: rgb(12, 12, 49);
     padding: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     max-width: 400px;
     color: #f0f4f8;
     text-align: center;
     width: 340px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    border-bottom: 1px solid grey;
-    margin: 0 auto;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-bottom:1px solid grey ;
 }
 
 .caption {
@@ -17,7 +16,22 @@
     color: #f0f4f8;
 }
 
-.select {
+.button {
+    width: 150px;
+    height: 30px;
+    border: 0px;
+    border-radius: 5px;
+    color: white;
+    background-color: grey;
+    cursor: pointer;
+}
+
+.button:active {
+    background-color: white;
+    color: black;
+}
+
+.input[type="text"] {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
@@ -34,7 +48,7 @@
     }
 }
 
-.button {
+.input[type="submit"] {
     width: 100%;
     padding: 10px;
     font-size: 1rem;
@@ -45,7 +59,6 @@
     border-radius: 6px;
     cursor: pointer;
     transition: background-color 0.2s;
-    margin-top: 10px;
 
     &:hover {
         background-color: #3366ff;
@@ -54,8 +67,4 @@
     &:active {
         background-color: #0033cc;
     }
-}
-
-.section {
-    margin-top: 40px; /* Adds spacing between sections instead of <br> and <hr> */
 }
