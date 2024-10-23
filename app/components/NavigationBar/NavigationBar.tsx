@@ -43,11 +43,8 @@ const NavigationBar = () => {
           <Image src={'/brush.jpg'} alt="dashboard" width={24} height={24} />
           <span>Apparance</span>
         </Link>
-        <Link className={styles.contanerNav} href={'#'}>
-          <Image src={'/download.png'} alt="dashboard" width={24} height={24} />
-        </Link>
         <Link className={styles.contanerNav} href={'/plugin'}>
-          <Image src={'/plugin.png'} alt="dashboard" width={24} height={24} />
+          <Image src={'/download.png'} alt="dashboard" width={24} height={24} />
           <span>Plugins</span>
         </Link>
         <Link className={styles.contanerNav} href={'/users'}>
