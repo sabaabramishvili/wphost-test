@@ -3,5 +3,8 @@ import Plugins from "./components/Plugins/Plugins";
 import Roles from "./components/Roles/Roles";
 
 export default function Home() {
-  return <></>;
+  return
+  <>
+
+  </>;
 }
