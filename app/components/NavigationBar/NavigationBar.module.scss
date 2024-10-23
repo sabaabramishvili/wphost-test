@@ -1,13 +1,15 @@
 .wrapper {
   padding: 15px 5px;
-  border-radius: 2px; 
+  border-radius: 2px;
   height: fit-content;
   background-color: rgb(12, 12, 49);
   width: 180px;
   position: sticky;
+  height: 100vh;
   left: 0;
   top: 0;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
 }
 
 .contanerNav {
