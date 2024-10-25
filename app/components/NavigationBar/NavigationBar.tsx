@@ -26,7 +26,7 @@ const NavigationBar = () => {
           <Image src={'/pin.png'} alt="dashboard" width={24} height={24} />
           <span>Posts</span>
         </Link>
-        <Link className={styles.contanerNav} href={'#'}>
+        <Link className={styles.contanerNav} href={'/media'}>
           <Image src={'/camera.jpg'} alt="dashboard" width={24} height={24} />
           <span>Media</span>
         </Link>
@@ -38,7 +38,7 @@ const NavigationBar = () => {
           <Image src={'/comments.png'} alt="dashboard" width={24} height={24} />
           <span>Comments</span>
         </Link>
-        <Link className={styles.contanerNav} href={'#'}>
+        <Link className={styles.contanerNav} href={'/themes'}>
           <Image src={'/brush.jpg'} alt="dashboard" width={24} height={24} />
           <span>Apparance</span>
         </Link>
@@ -71,7 +71,7 @@ const NavigationBar = () => {
             {active && (
               <div className={styles.wrapperLists}>
                 <ul>
-                  <Link className={styles.LinksTag} href={'#'}>
+                  <Link className={styles.LinksTag} href={'/import'}>
                     <li className={styles.listStyle}>Import</li>
                   </Link>
                   <Link className={styles.LinksTag} href={'/export'}>

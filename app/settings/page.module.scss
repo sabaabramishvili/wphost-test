@@ -28,3 +28,10 @@
 // .container :global .ant-switch-inner {
 //   background-color: red;
 // }
+
+.mainContainer {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  height: fit-content;
+}
